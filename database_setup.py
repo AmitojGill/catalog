@@ -10,6 +10,13 @@ class Categories(Base):
 	name = Column(String(80),nullable = False)
 
 class Items(Base):
+	__tablename__='items'
+	id = Column(Integer, primary_key = True)
+	name = Column(String(80), nullable = False)
+	description = Column(String(250))
+	category_id = Column(Integer, ForeignKey('categories.id'))
+
+	categories = relationship(Categories)
 
 
 engine = create_engine('sqlite///catalog.db')
