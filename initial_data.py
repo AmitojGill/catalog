@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from database_setup.py import Base, Categories, Items
+from database_setup import Base, Categories, Items
 
 engine = create_engine('sqlite:///catalog.db')
 
@@ -9,12 +9,14 @@ DBSession = sessionmaker(bind = engine)
 session = DBSession()
 
 
-catagories = ["Kitchen & Dining","Bed & Bath", "Appliances", "Garden & Outdoor", "Fine Art", "Pet Supplies"]
+categories = ["Kitchen & Dining","Bed & Bath", "Appliances", 
+				"Garden & Outdoor", "Fine Art", "Pet Supplies"]
 
-for i in catgories:
+for i in categories:
 	category = Categories(name=i)
-	session.add(i)
+	session.add(category)
 	session.commit()
+	print "%s added to the categories table" % i
 
 
 
