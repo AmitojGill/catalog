@@ -16,9 +16,10 @@ class Items(Base):
 	id = Column(Integer, primary_key = True)
 	name = Column(String(80), nullable = False)
 	description = Column(String(250))
+	img = Column(String(250))
+	buy=Column(String(250))
 	category_id = Column(Integer, ForeignKey('categories.id'))
-
-	categories = relationship(Categories)
+	category = relationship(Categories)
 
 
 engine = create_engine('sqlite:///catalog.db')
