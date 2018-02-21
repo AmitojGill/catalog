@@ -1,18 +1,22 @@
-	div.container{
-		Width: 100%;
-	}
-	nav {
-		float: left;
-		width: 20%;
-		background-color: yellow;
-	}
-	article {
-		margin-left: 80px;
-		border-left: 1px solid gray;
-		background-color: pink;
-	}
-	header {
-		max-height: 100px;
-		width: 100%;
-		background-color: gray;
-	}
+div.container{
+	Width: 100%;
+}
+nav {
+	float: left;
+	width: 20%;
+	background-color: yellow;
+}
+article {
+	margin-left: 80px;
+	border-left: 1px solid gray;
+	background-color: pink;
+}
+header {
+	max-height: 100px;
+	width: 100%;
+	background-color: gray;
+}
+h1 {
+	color: blue;
+	text-align: center;
+}
