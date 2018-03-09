@@ -1,3 +1,16 @@
 body{
 	background-color: yellow;
 }
+.container {
+	display: block;
+}
+.category{
+	width: 150px;
+	height: 150px;
+	background-color: blue;
+}
+.newbooks{
+	width: 150px;
+	height: 150px;
+	background-color: red;
+}
